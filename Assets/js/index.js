@@ -1,7 +1,7 @@
 // Obtén referencias a los enlaces de navegación
 const enlaceAlarmas = document.querySelector('a[href="#mencion"]');
 // Agrega manejadores de eventos a los enlaces
-enlaceMencion.addEventListener('click', scrollToSection);
+
 
 // Función para desplazarse suavemente a la sección correspondiente
 function scrollToSection(event) {
