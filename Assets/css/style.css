@@ -1,0 +1,185 @@
+/*  importamos la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'M PLUS Rounded 1c';
+
+}
+body{
+  background: #081b29;   /* fonde de la pagina*/
+    color: rgb(219, 225, 230);
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: rgb(15, 151, 151);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+/*Estilo de la clase de logo */
+.logo{
+    position: relative;
+    font-size: 25px;/*tamaño de la fuente de clase logo*/
+    color: blue;/*Color de texto de logo*/
+    text-decoration: none;/*decoracion de texto*/
+    font-weight: 600; /*peso de fuente*/
+
+}
+
+.navbar a
+{
+    font-size: 18px;/*Tamaño de la fuente */
+    color: rgb(3, 53, 53);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #eeea08;
+}
+.navbar a.activete {
+    color: #fcfcfc;
+}
+.home{
+    height: 100vh;
+    background: url('../img/fondo.png')no-repeat;
+background-size: cover;
+background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h3{
+    font-size: 32x;
+    font-weight:  700;
+    color: rgb(16, 245, 245);
+}
+.home-content p{
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin: 20px 0 40px;
+
+}
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+  
+}
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background:rgb(19, 187, 238);
+    border: rgb(6, 232, 240);
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+
+
+}
+.btn-box a:nth-child(2){
+   /* background: transparent;*/
+   /* color: aqua;*/
+}
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fbff06;
+    z-index: -1;
+    transition: .5s;
+
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #13b5dd;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #13b5dd;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;   
+    background: red;
+    z-index: -1;
+    transition: .5s;
+
+}
+.home-sci a:hover::before{
+    width: 100%;
+
+}
+.home-imgHover{
+    position: relative;
+    top: 0;
+    right: -70px;
+    width:900px;
+    height:100%;
+    background: transparent;
+  
+    transition: 3s;
+
+}
+.home-imgHover:hover{
+    background: #11050579;
+    opacity: .5;
+}
+/*Estilos de Login*************************************************************************************/

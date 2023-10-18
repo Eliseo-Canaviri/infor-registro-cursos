@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Assets/css/stylelogin.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title"><samp>Iniciar Sesión</samp></div>
+        <form action="#">
+            <div class="row">   
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+            </div>
+            <div class="row">   
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="clave" name="clave" placeholder="Password">
+            </div>
+            <div class="row button">
+                <input class="btn" type="submit" onclick="frmLogin(event);" value="Login">
+            </div>
+        </form>
+    </div>
+   <script src="../Assets/js/funciones.js"></script>
+</body>
+</html>
