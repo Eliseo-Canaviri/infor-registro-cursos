@@ -20070,26 +20070,6 @@ textarea.form-control-lg {
 /*-----------------------------------------------
 |   Reboot
 -----------------------------------------------*/
-::-webkit-input-placeholder {
-  opacity: 1;
-  color: var(--#000000100);
-}
-::-moz-placeholder {
-  opacity: 1;
-  color: var(--#000000100);
-}
-:-ms-input-placeholder {
-  opacity: 1;
-  color: var(--#000000100);
-}
-::-ms-input-placeholder {
-  opacity: 1;
-  color: var(--#000000100);
-}
-::placeholder {
-  opacity: 1;
-  color: var(--#000000100);
-}
 
 html {
   scroll-behavior: smooth;
