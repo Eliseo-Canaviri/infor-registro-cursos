@@ -17,7 +17,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10px;
+    
     background: rgb(15, 151, 151);
     display: flex;
     justify-content: space-between;
@@ -25,14 +25,6 @@ body{
     z-index: 100;
 }
 /*Estilo de la clase de logo */
-.logo{
-    position: relative;
-    font-size: 25px;/*tamaño de la fuente de clase logo*/
-    color: blue;/*Color de texto de logo*/
-    text-decoration: none;/*decoracion de texto*/
-    font-weight: 600; /*peso de fuente*/
-
-}
 
 .navbar a
 {
@@ -54,7 +46,7 @@ body{
 }
 .home{
     height: 100vh;
-    background: url('../img/fondo.png')no-repeat;
+    background: url('../img/fondo1.png')no-repeat;
 background-size: cover;
 background-position: center;
     display: flex;
@@ -64,10 +56,11 @@ background-position: center;
 .home-content{
     max-width: 600px;
 }
-.home-content h1{
-    font-size: 56px;
+.home-content h2{
+    font-size: 45px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+    color: #fff;
 }
 .home-content h3{
     font-size: 32x;
@@ -79,6 +72,7 @@ background-position: center;
     line-height: 1.4;
     letter-spacing: 1px;
     margin: 20px 0 40px;
+    color: #13b5dd;
 
 }
 .home-content .btn-box{
@@ -108,10 +102,7 @@ background-position: center;
 
 
 }
-.btn-box a:nth-child(2){
-   /* background: transparent;*/
-   /* color: aqua;*/
-}
+
 .btn-box a::before {
     content: '';
     position: absolute;
@@ -158,7 +149,7 @@ position: relative;
     left: 0;
     width: 0;
     height: 100%;   
-    background: red;
+    background: rgb(255, 255, 255);
     z-index: -1;
     transition: .5s;
 
@@ -178,8 +169,5 @@ position: relative;
     transition: 3s;
 
 }
-.home-imgHover:hover{
-    background: #11050579;
-    opacity: .5;
-}
+
 /*Estilos de Login*************************************************************************************/
