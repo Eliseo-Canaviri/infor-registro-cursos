@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="./Assets/css/style.css" />
     <!-- css  theme -->
     <link href="Assets/css/theme.css" rel="stylesheet" />
-    
+    <!-- link de Contactos -->
+    <link rel="stylesheet" type="text/css" href="/Assets/css/contacto.css">
     
     <title>Sistema-Web</title>
   </head>
@@ -27,12 +28,12 @@
   <body>
     <header class="header"><a class="navbar-brand" href="index.html"><img src="Assets/img/Logo.png" alt="" /></a>
 
+
     <!--parte de navegacion -->
       <nav class="navbar">
 
         <a href="index.html" class="active">Home</a>
         <a href="#mencion">Menciones</a>
-        <a href="#">Contactos</a>
         <a href="./Views/login.html" class="activete">Acceder</a>
       </nav>
      
@@ -53,13 +54,34 @@
         </p>
          <!-- Contenedor de botones -->
         <div class="btn-box">
-          <a href="#">Cursos</a>
-          <a href="#">Talleres</a>
+  
+          <a id="openModalBtn" href="#">Cursos</a>
+          <a  id="openModalBtn1" href="#">Talleres</a>
+    <!-- Modal -->
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+              <h2>Este es un modal</h2>
+            <p>¡Hola! Soy un modal simple.</p>
+        </div>
+    </div>
+    <!-- Fin de Modal -->
+   <!-- Modal 2 -->
+
+   <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn1" class="close">&times;</span>
+          <h2>Este es un modal 1</h2>
+        <p>¡Hola! Soy un modal simple 1.</p>
+    </div>
+</div>
+<!-- Fin de Modal 2 -->
         </div>
       </div>
       <div class="home-sci">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/qr/GWT54CCFXMK7O1"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
       </div>
       <span class="home-imgHover"></span>
@@ -88,12 +110,7 @@
         </div>
         <!-- end of .container-->
       </section>
-          
-   
-     
-
-
-
+      
           </div>
           <!-- end of .container-->
   
@@ -101,7 +118,7 @@
         <!-- <section> close ============================-->
         <!-- ============================================-->
   
-  
+        <script src="/Assets/js/contacto.js"></script>
     <script src="./Assets/js/index.js"></script>
   <!-- js de bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
