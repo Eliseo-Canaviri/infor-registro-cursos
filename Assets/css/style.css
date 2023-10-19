@@ -82,26 +82,40 @@ body{
     height: 50px;
   
 }
-.btn-box a{
+/* Configura la posición del elemento relativa al flujo normal del documento */
+.btn-box a {
     position: relative;
+    /* Configura el elemento para mostrar como un elemento en línea y permite alinear contenido */
     display: inline-flex;
+    /* Centra el contenido horizontalmente y verticalmente */
     justify-content: center;
     align-items: center;
-    width: 150px;
+    /* Establece el ancho del elemento a 150 píxeles */
+    width: 200px;
+    /* Establece la altura del elemento al 100% del contenedor padre */
     height: 100%;
-    background:rgb(19, 187, 238);
+    /* Establece el color de fondo del elemento */
+    background: rgb(19, 187, 238);
+    /* Establece el borde del elemento */
     border: rgb(6, 232, 240);
+    /* Agrega esquinas redondeadas al elemento */
     border-radius: 8px;
+    /* Configura el tamaño de fuente del texto en 19 píxeles */
     font-size: 19px;
+    /* Establece el color del texto en negro */
     color: black;
+    /* Elimina la decoración de subrayado de los enlaces */
     text-decoration: none;
+    /* Establece el peso de la fuente en 600 (normalmente, negrita) */
     font-weight: 600;
+    /* Añade espaciado entre caracteres del texto */
     letter-spacing: 1px;
+    /* Configura la superposición (z-index) del elemento */
     z-index: 1;
+    /* Controla el desbordamiento del contenido que excede los límites del elemento */
     overflow: hidden;
-
-
 }
+
 
 .btn-box a::before {
     content: '';
