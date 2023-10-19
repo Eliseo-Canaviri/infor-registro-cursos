@@ -5394,9 +5394,9 @@ textarea.form-control-lg {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding-top: 1rem; 
   padding-right: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   padding-left: 1rem;
 }
 .navbar > .container,
