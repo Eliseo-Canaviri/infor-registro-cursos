@@ -1,5 +1,5 @@
 // Obtén referencias a los enlaces de navegación
-const enlaceAlarmas = document.querySelector('a[href="#mencion"]');
+const enlacemencion = document.querySelector('a[href="#mencion"]');
 // Agrega manejadores de eventos a los enlaces
 
 
