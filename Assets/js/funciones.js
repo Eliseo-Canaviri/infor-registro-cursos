@@ -24,3 +24,12 @@ function frmLogin(e) {
         }
     }
 }
+
+function frmUsuario() {
+    document.getElementById("title").textContent = "Nuevo Usuario";
+    document.getElementById("btnAccion").textContent = "Registrar";
+    document.getElementById("claves").classList.remove("d-none");
+    document.getElementById("frmUsuario").reset();
+    document.getElementById("id").value = "";
+    $("#nuevo_usuario").modal("show");
+}
