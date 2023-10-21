@@ -33,3 +33,12 @@ function frmUsuario() {
     document.getElementById("id").value = "";
     $("#nuevo_usuario").modal("show");
 }
+
+
+function frmPart() {
+    document.getElementById("title").textContent = "Nuevo Participante";
+    document.getElementById("btnAccion").textContent = "Registrar";
+
+    document.getElementById("id").value = "";
+    $("#nuevo_part").modal("show");
+}

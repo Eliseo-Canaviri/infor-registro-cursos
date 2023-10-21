@@ -10,14 +10,19 @@
     background-color: rgba(0,0,0,0.7);
 }
 
+
+
 .modal-content {
-    background-color: #0f0707;
+    background-color: #151616;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #00f7ff;
     width: 50%;
     text-align: center;
 }
+
+
+
 
 .close {
     color: #aaaaaa;

@@ -28,7 +28,7 @@ body{
 
 .navbar a
 {
-    font-size: 18px;/*Tamaño de la fuente */
+    font-size: 20px;/*Tamaño de la fuente */
     color: rgb(3, 53, 53);
     text-decoration: none;
     font-weight: 600;
@@ -185,4 +185,11 @@ position: relative;
 
 }
 
-/*Estilos de Login*************************************************************************************/
+footer{
+    background: #081b29;
+    height: 100px;
+    
+}
+footer h1{
+    color: #fcfcfc;
+}

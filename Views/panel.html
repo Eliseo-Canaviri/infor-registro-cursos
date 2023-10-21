@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Views/panel.html">
                 <div class="sidebar-brand-icon ">
                     <i class="fa-solid fa-house"></i>
                 </div>
@@ -43,16 +43,35 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/Views/panel.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>PANEL</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-          
+    <!-- *********************************************************************************** -->
+            <li class="nav-item">
+                <a class="nav-link" href="/Views/Usuario/index.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Usuarios</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Views/Participantes/index.html">
+                 <i class="fa-solid fa-users-between-lines"></i>
+                    <span>Participantes</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Cursos</span></a>
+            </li>
+            
+           
+      
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -68,21 +87,8 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Views/Usuario/index.html">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Usuarios</span></a>
-            </li>
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Cursos</span></a>
-            </li>
            
-
-           
-
+<!-- ******************************************************************************************************* -->
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -237,9 +243,93 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                         <!-- Page Heading -->
+                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">PANEL</h1>
+                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                    class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>
+                        </div>
+    
 
-                    <!-- Content Row -->
-                    <div class="row">                
+                       <!-- Content Row -->
+                       <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class=" font-weight-bold text-primary text-uppercase mb-1">
+                                                Usuarios</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                                        </div>
+                                        <div class="col-auto">
+                               
+                                            <i class="fa-solid fa-users fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>      
+                        
+                          <!-- Earnings (Monthly) Card Example -->
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class=" font-weight-bold text-success text-uppercase mb-1">
+                                               Participantes</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
+                                        </div>
+                                        <div class="col-auto">
+                                           
+                                            <i class="fa-solid fa-chalkboard-user fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Earnings (Monthly) Card Example -->
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2 ">
+                                            <div class="  font-weight-bold text-warning text-uppercase mb-1  ">
+                                               Cordinadores</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
+                                        </div>
+                                        <div class="col-auto">
+                            
+                                            <i class="fa-solid fa-person-chalkboard fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Earnings (Monthly) Card Example -->
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text font-weight-bold font-weight-bold text-danger text-uppercase mb-1">
+                                            
+                                                    Cursos y Talleres
+                                              
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">23</div>
+                                        </div>
+                                        <div class="col-auto">
+                                         
+                                            <i class="fa-solid fa-users-rectangle fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <!-- /.container-fluid -->
 

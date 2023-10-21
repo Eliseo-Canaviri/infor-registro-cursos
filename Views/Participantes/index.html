@@ -246,14 +246,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- USUARIO ****************************************************************** -->
-                    <div class="app-title ">
-                        <div>
-                            <h2></i> Usuarios</h2>
-                        </div>
-                    </div>
+                    <!-- part****************************************************************** -->
+                   
 
-                    <button class="btn btn-primary mb-2" type="button" onclick="frmUsuario();">Nuevo <i
+<!-- ******************************************** -->
+
+
+<div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Participantes</h6>
+</div>
+                    <button class="btn btn-primary mb-2" type="button" onclick="frmPart();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
                     <div class="row">
                         <div class="col-lg-12">
@@ -264,34 +266,44 @@
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th>Id</th>
-                                                    <th>Usuario</th>
+                                                    <th>CI</th>
                                                     <th>Nombres</th>
+                                                    <th>Apellidos</th>
+                                                    <th>Grado</th>
                                                     <th>Estado</th>
                                                     <th></th>
+                                               
                                                 </tr>
                                             </thead>
                                             <!-- datos de tabla -->
                                             <tbody>
                                                 <tr>
                                                   <th scope="row">1</th>
-                                                  <td>Admin</td>
-                                                  <td>Eliseo</td>
+                                                  <td>8943895</td>
+                                                  <td>Mark</td>
+                                                  <td>Mamani</td>
+                                                  <td>5°</td>
                                                   <td><span class="badge badge-success">Activo</span></td>
                                                   <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
 
                                                 </tr>
                                                 <tr>
                                                   <th scope="row">2</th>
-                                                  <td>User</td>
-                                                  <td>Elliot</td>
+                                                  <td>4384353</td>
+                                                  <td>Jacob</td>
+                                                  <td>Canaviri</td>
+                                                  <td>4°</td>
                                                   <td><span class="badge badge-danger">Inactivo</span></td>
                                                   <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
 
                                                 </tr>
                                                 <tr>
                                                   <th scope="row">3</th>
-                                                  <td>Admin</td>
-                                                  <td>Elmer</td>
+                                                  <td>35345</td>
+                                                  <td>Larry</td>
+                                                  <td>Vale</td>
+                                                  <td>3°</td>
+                                                
                                                   <td><span class="badge badge-success">Activo</span></td>
                                                   <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
                                                 
@@ -312,41 +324,33 @@
 
                     <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxx -->
                     <!-- Modal -->
-                    <div id="nuevo_usuario" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+                    <div id="nuevo_part" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-primary">
-                                    <h5 class="modal-title text-white" id="title">Nuevo Usuario</h5>
+                                    <h5 class="modal-title text-white" id="title">Nuevo Participante</h5>
                                     <button class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" id="frmUsuario">
+                                    <form method="post" id="frmPart">
                                         <div class="form-group">
-                                            <label for="usuario">Usuario</label>
+                                            <label for="usuario">ci</label>
                                             <input type="hidden" id="id" name="id">
-                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
+                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="ci">
                                         </div>
                                         <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombre del usuario">
+                                            <label for="nombre">Nombres</label>
+                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombres">
                                         </div>
-                                        <div class="row" id="claves">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="clave">Contraseña</label>
-                                                    <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="confirmar">Confirmar Contraseña</label>
-                                                    <input id="confirmar" class="form-control" type="password" name="confirmar" placeholder="Confirmar contraseña">
-                                                </div>
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="nombre">Apellidos</label>
+                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Apellido">
                                         </div>
-                                        <button class="btn btn-primary" type="button" onclick="registrarUser(event);" id="btnAccion">Registrar</button>
+                                       
+                                    
+                                        <button class="btn btn-primary" type="button" onclick="registrarPart(event);" id="btnAccion">Registrar</button>
                                         <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                                     </form>
                                 </div>
