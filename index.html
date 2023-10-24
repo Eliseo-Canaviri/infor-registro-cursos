@@ -19,6 +19,10 @@
   <link href="Assets/css/theme.css" rel="stylesheet" />
   <!-- link de Contactos -->
   <link rel="stylesheet" type="text/css" href="/Assets/css/modal.css">
+    <!-- datatable -->
+    <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- alert2 -->
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
 
   <title>Infor Registro Cursos</title>
 </head>
@@ -82,23 +86,23 @@
                 <div class="form-group">
                     <h2> Ingrese Sus Datos </h2>
                   <br>
-                  <input id="usuario" class="form-control " type="text" name="usuario" placeholder=" Ci">
+                  <input id="ci" class="form-control " type="text" name="usuario" placeholder=" Ingrese Ci">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder=" Nombres y Apellidos">
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Nombres y Apellidos">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Celular">
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Celular">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Correo">
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Correo">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="residencia">
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese residencia">
                 </div>
 <!-- selec -->
 <div class="formulario">
@@ -110,12 +114,12 @@
       <option value="preparatoria">3°</option>
       <option value="universidad">4°</option>
       <option value="universidad">5°</option>
+      <option value="universidad">otros</option>
   </select>
 </div>
 <!-- finde select -->
                 <br>
-                <button class="btn btn-primary" type="button" onclick="registrarPart(event);"
-                  id="btnAccion">Registrar</button>
+                <button onclick="registrarPart(event);" class="btn btn-primary" type="button" id="btnAccion">Registrar</button>
                 <button id="frmpartclo" class="btn btn-danger"  type="button" data-dismiss="modal">Cancelar</button>
               </form>
             </div>
@@ -188,6 +192,16 @@
       crossorigin="anonymous"></script>
 
     <script src="/Assets/js/funciones.js"></script>
+
+
+     <!-- Page datatable plugins -->
+     <script src="/Assets/js/jquery.dataTables.min.js"></script>
+     <script src="/Assets/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/Assets/js/datatables-demo.js"></script>
+<!-- alert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

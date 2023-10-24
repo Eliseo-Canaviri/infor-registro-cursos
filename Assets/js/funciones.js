@@ -75,8 +75,8 @@ function registrarUser(e) {
   const nombre = document.getElementById("nombre");
   const usuario = document.getElementById("usuario");
  
-  $("#nuevo_part").modal("hide"); //ocultar modal
-
+ 
+ 
 
   if (usuario.value == "" || nombre.value == "") {
     Swal.fire({
@@ -94,6 +94,7 @@ function registrarUser(e) {
       showConfirmButton: false,
       timer: 1500,
     });
+    $("#nuevo_part").modal("hide"); //ocultar modal
   }
 }
 
