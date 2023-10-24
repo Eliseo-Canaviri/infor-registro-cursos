@@ -259,11 +259,11 @@
                     <!-- USUARIO ****************************************************************** -->
                     <div class="app-title ">
                         <div>
-                            <h2></i> Participantes</h2>
+                            <h2></i> Coodinadores y Becarios</h2>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary mb-4" type="button" onclick="frmPart();">Nuevo <i
+                    <button class="btn btn-primary mb-4" type="button" onclick="frmCoor();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
                   
                    <!-- DataTales Example -->
@@ -275,11 +275,9 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th>ID</th>
-                                        <th>CI</th>
                                         <th>Nombres</th>
-                                        <th>Correo</th>
-                                        <th>Telefono</th>
-                                        <th>Evento</th>
+                                        <th>Celular</th>
+                                        <th>Tipo</th>
                                         <th>Estado</th>
                                         <th></th>                              
                                     </tr>
@@ -288,38 +286,32 @@
                                 <tbody>
                         
                                     <tr>
-                                        <td>1 </td>
-                                        <td>34578934</td>
-                                        <td>Jose</td>
-                                        <td>jose123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Congreso 2023</td>
+                                        <td>1 </td>                                
+                                        <td>Jose</td>                          
+                                        <td>785433</td>
+                                        <td>Cordinador (Computacion Movil)</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                         
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>78343564</td>
-                                        <td>Yairt</td>
-                                        <td>Yairt123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Curso de PHP</td>
+                                        <td>1 </td>                                
+                                        <td>Eliseo Canaviri</td>                          
+                                        <td>785433</td>
+                                        <td>Becario (Software I)</td>
                                         <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                     
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>33543534</td>
-                                        <td>Monica</td>
-                                        <td>monica123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Curso Java </td>
+                                        <td>1 </td>                                
+                                        <td>Hilda</td>                          
+                                        <td>785433</td>
+                                        <td>Cordinador (Software II)</td>
                                         <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                       
                                     </tr>
@@ -347,19 +339,13 @@
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
                                         <div class="form-group">
-                                            <label for="ci">ci</label>
+                                            <label for="ci">Nombres y Apellidos</label>
                                             <input type="hidden" id="id" name="id">
                                             <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese su CI">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="nombre">Nombres y Apellidos</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Su Nombre y Apellidos">
-                                        </div>
                                         
-                                        <div class="form-group">
-                                            <label for="correo">Correo</label>
-                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese su Correo">
-                                        </div>
+                                        
+                                       
                                         <div class="form-group">
                                             <label for="telefono">Celular</label>
                                             <input id="celuar" class="form-control" type="text" name="celuar" placeholder="Ingrese su Celular">
@@ -368,10 +354,9 @@
                                             <label for="curso">Seleccione Curso</label>
                                             <select class="form-control" aria-label="Default select example">
                                                 <option selected>Seleccionar</option>
-                                                <option value="1">JAVA</option>
-                                                <option value="2">PHP</option>
-                                                <option value="3">Curso de PHP</option>
-                                                <option value="4">Curso Java</option>
+                                                <option value="1">Coodinador</option>
+                                                <option value="2">Becario</option>
+                                               
                                               </select>
                                           </div>
                                     

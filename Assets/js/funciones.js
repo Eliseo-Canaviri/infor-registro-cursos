@@ -41,6 +41,61 @@ function frmPart() {
   document.getElementById("id").value = "";
   $("#nuevo_part").modal("show");
 }
+function frmCurso() {
+  document.getElementById("title").textContent = "Nuevo Curso ";
+  document.getElementById("btnAccion").textContent = "Registrar";
+
+  document.getElementById("id").value = "";
+  $("#nuevo_part").modal("show");
+}
+function frmExpo() {
+  document.getElementById("title").textContent = "Nuevo Expositores ";
+  document.getElementById("btnAccion").textContent = "Registrar";
+
+  document.getElementById("id").value = "";
+  $("#nuevo_part").modal("show");
+}
+function frmCoor() {
+  document.getElementById("title").textContent = "Nuevo Coordinadores  ";
+  document.getElementById("btnAccion").textContent = "Registrar";
+
+  document.getElementById("id").value = "";
+  $("#nuevo_part").modal("show");
+}
+function frmlabo() {
+  document.getElementById("title").textContent = "Nuevo Laboratorio  ";
+  document.getElementById("btnAccion").textContent = "Registrar";
+
+  document.getElementById("id").value = "";
+  $("#nuevo_part").modal("show");
+}
+function registrarUser(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre");
+  const usuario = document.getElementById("usuario");
+ 
+  $("#nuevo_part").modal("hide"); //ocultar modal
+
+
+  if (usuario.value == "" || nombre.value == "") {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todo los campos son obligatorios ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Usuario registrado con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  }
+}
 
 function btnEliminarPart(id) {
   Swal.fire({
@@ -74,6 +129,11 @@ function registrarPart(e) {
   e.preventDefault();
   const ci = document.getElementById("ci");
   const nombre = document.getElementById("nombre");
+  const apellido = document.getElementById("apellido");
+  const telefono = document.getElementById("telefono");
+  const email = document.getElementById("email");
+  $("#nuevo_part").modal("hide"); //ocultar modal
+
 
   if (ci.value == "" || nombre.value == "") {
     Swal.fire({
@@ -92,4 +152,44 @@ function registrarPart(e) {
       timer: 1500,
     });
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function frmCambiarPass(e) {
+  e.preventDefault();
+  const actual= document.getElementById("clave_actual").value;
+  const nueva= document.getElementById("clave_nueva").value;
+ const confirmar= document.getElementById("confirmar_clave").value;
+ if (actual==''|| nueva==''||confirmar=='') {
+        alertas ('Todos los campos son obligatorio ☺','warning');
+ }else{
+    
+ }
 }

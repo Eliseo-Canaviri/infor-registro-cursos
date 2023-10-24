@@ -259,11 +259,11 @@
                     <!-- USUARIO ****************************************************************** -->
                     <div class="app-title ">
                         <div>
-                            <h2></i> Participantes</h2>
+                            <h2></i> Laboratorios</h2>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary mb-4" type="button" onclick="frmPart();">Nuevo <i
+                    <button class="btn btn-primary mb-4" type="button" onclick="frmlabo();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
                   
                    <!-- DataTales Example -->
@@ -275,11 +275,8 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th>ID</th>
-                                        <th>CI</th>
                                         <th>Nombres</th>
-                                        <th>Correo</th>
-                                        <th>Telefono</th>
-                                        <th>Evento</th>
+                                        <th>Maquinas</th>                                                                    
                                         <th>Estado</th>
                                         <th></th>                              
                                     </tr>
@@ -288,38 +285,32 @@
                                 <tbody>
                         
                                     <tr>
-                                        <td>1 </td>
-                                        <td>34578934</td>
-                                        <td>Jose</td>
-                                        <td>jose123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Congreso 2023</td>
+                                        <td>1 </td>                                
+                                        <td>Software I</td>                          
+                                        <td>17</td>
+                                      
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                         
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>78343564</td>
-                                        <td>Yairt</td>
-                                        <td>Yairt123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Curso de PHP</td>
+                                        <td>2</td>                                
+                                        <td>Software II</td>                          
+                                        <td>20</td>
+                                      
                                         <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                     
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>33543534</td>
-                                        <td>Monica</td>
-                                        <td>monica123@gmail.com</td>
-                                        <td>97654321</td>
-                                        <td>Curso Java </td>
+                                        <td>3</td>                                
+                                        <td>Software III</td>                          
+                                        <td>10</td>
+                                      
                                         <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                       
                                     </tr>
@@ -347,33 +338,18 @@
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
                                         <div class="form-group">
-                                            <label for="ci">ci</label>
+                                            <label for="ci">Nombres y Apellidos</label>
                                             <input type="hidden" id="id" name="id">
-                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese su CI">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nombre">Nombres y Apellidos</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Su Nombre y Apellidos">
+                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese Nombre de Laboratorio">
                                         </div>
                                         
+                                        
                                         <div class="form-group">
-                                            <label for="correo">Correo</label>
-                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese su Correo">
+                                            <label for="correo">Maquinas</label>
+                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese # de maquinas">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="telefono">Celular</label>
-                                            <input id="celuar" class="form-control" type="text" name="celuar" placeholder="Ingrese su Celular">
-                                        </div>
-                                          <div class="form-group">
-                                            <label for="curso">Seleccione Curso</label>
-                                            <select class="form-control" aria-label="Default select example">
-                                                <option selected>Seleccionar</option>
-                                                <option value="1">JAVA</option>
-                                                <option value="2">PHP</option>
-                                                <option value="3">Curso de PHP</option>
-                                                <option value="4">Curso Java</option>
-                                              </select>
-                                          </div>
+                                        
+                                       
                                     
                                         <button class="btn btn-primary" type="button" onclick="registrarPart(event);" id="btnAccion">Registrar</button>
                                         <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>

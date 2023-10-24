@@ -193,3 +193,8 @@ footer{
 footer h1{
     color: #fcfcfc;
 }
+
+.formulario {
+    text-align: center;
+    margin: 20px;
+}

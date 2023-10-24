@@ -22,6 +22,10 @@
     <!-- Custom styles for this template-->
     <link href="/Assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+      <!-- datatable -->
+      <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+      <!-- alert2 -->
+      <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -43,36 +47,11 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/Views/panel.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Panel</span></a>
-            </li>
+          
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-<!-- *********************************************************************** -->
-            <li class="nav-item">
-                <a class="nav-link" href="/Views/Usuario/index.html">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Usuarios</span></a>
-            </li>
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Cursos</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                 <i class="fa-solid fa-users-between-lines"></i>
-                    <span>Participantes</span></a>
-            </li>
-           
-      
+    <!-- *********************************************************************************** -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -82,12 +61,43 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                      
-                        <a class="collapse-item" href="#">Ing. Informática</a>
-                       
+
+                        <a class="collapse-item" href="/Views/Carrera/index.html">Ing. Informática</a>
+                        <a class="collapse-item" href="/Views/Usuario/index.html">Usuarios</a>
                     </div>
+
                 </div>
+
             </li>
+            <!-- Heading -->
+<!-- *********************************************************************** -->
+<li class="nav-item">
+    <a class="nav-link" href="/Views/Participantes/index.html">
+        <i class="fa-solid fa-users-between-lines"></i>
+        <span>Participantes</span></a>
+</li>
+<!-- Nav Item - Tables -->
+<li class="nav-item">
+    <a class="nav-link" href="/Views/Cursos/index.html">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Cursos</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/Views/Cursos/index.html">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <span>Expositores</span></a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="/Views/Cursos/index.html">
+        <i class="fa-solid fa-users-rays"></i>
+        <span>Cordinadores y Becarios</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/Views/Cursos/index.html">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>Reportes</span></a>
+</li>
             <!-- ************************************************** -->
 
 
@@ -246,83 +256,81 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- part****************************************************************** -->
-                   
-
-<!-- ******************************************** -->
-
-
-<!-- USUARIO ****************************************************************** -->
-<div class="app-title ">
-    <div>
-        <h2></i> Participantes</h2>
-    </div>
-</div>
-                    <button class="btn btn-primary mb-2" type="button" onclick="frmPart();">Nuevo <i
-                            class="fa-solid fa-user-plus"></i></button>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="tile">
-                                <div class="tile-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover" id="tblUsuarios">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                    <th>Id</th>
-                                                    <th>CI</th>
-                                                    <th>Nombres</th>
-                                                    <th>Apellidos</th>
-                                                    <th>Grado</th>
-                                                    <th>Estado</th>
-                                                    <th></th>
-                                               
-                                                </tr>
-                                            </thead>
-                                            <!-- datos de tabla -->
-                                            <tbody>
-                                                <tr>
-                                                  <th scope="row">1</th>
-                                                  <td>8943895</td>
-                                                  <td>Mark</td>
-                                                  <td>Mamani</td>
-                                                  <td>5°</td>
-                                                  <td><span class="badge badge-success">Activo</span></td>
-                                                  <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
-
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">2</th>
-                                                  <td>4384353</td>
-                                                  <td>Jacob</td>
-                                                  <td>Canaviri</td>
-                                                  <td>4°</td>
-                                                  <td><span class="badge badge-danger">Inactivo</span></td>
-                                                  <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
-
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">3</th>
-                                                  <td>35345</td>
-                                                  <td>Larry</td>
-                                                  <td>Vale</td>
-                                                  <td>3°</td>
-                                                
-                                                  <td><span class="badge badge-success">Activo</span></td>
-                                                  <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
-                                                
-                                                 
-                                                                                                  
-
-
-                                                </tr>
-                                              </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- USUARIO ****************************************************************** -->
+                    <div class="app-title ">
+                        <div>
+                            <h2></i> Cursos y Talleres</h2>
                         </div>
                     </div>
-                
+
+                    <button class="btn btn-primary mb-4" type="button" onclick="frmCurso();">Nuevo <i
+                            class="fa-solid fa-user-plus"></i></button>
+                  
+                   <!-- DataTales Example -->
+                   <div class="card shadow mb-4">
+                   
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre de Curso</th>
+                                        <th>Fecha</th>
+                                        <th>Costo (Bs.)</th>
+                                        <th>Laboratorio</th>
+                                        <th>Estado</th>
+                                      
+                                        <th></th>                              
+                                    </tr>
+                                </thead>
+                               
+                                <tbody>
+                        
+                                    <tr>
+                                        <td>1 </td>
+                                        <td>Curso de Java</td>
+                                        <td>25/10/2023</td>
+                                        <td>25</td>
+                                        <td>Software I</td>
+                                    
+                                        <td><span class="badge badge-success">Activo</span></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Curso de C++</td>
+                                        <td>25/10/2023</td>
+                                        <td>25</td>
+                                        <td>Software I</td>
+                                    
+                                        <td><span class="badge badge-success">Activo</span></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
+
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Curso de PHP</td>
+                                        <td>25/10/2023</td>
+                                        <td>25</td>
+                                        <td>Software I</td>
+                                    
+                                        <td><span class="badge badge-success">Activo</span></td>
+                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
+
+                                      
+                                    </tr>
+                              
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
                     <!-- FIN DE USUARIO -->
 
                     <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -331,7 +339,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-primary">
-                                    <h5 class="modal-title text-white" id="title">Nuevo Participante</h5>
+                                    <h5 class="modal-title text-white" id="title">Nuevo Curso</h5>
                                     <button class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -339,25 +347,33 @@
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
                                         <div class="form-group">
-                                            <label for="usuario">ci</label>
+                                            <label for="ci">Monbre de Curso</label>
                                             <input type="hidden" id="id" name="id">
-                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="ci">
+                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese Nombre de Curso">
                                         </div>
                                         <div class="form-group">
-                                            <label for="nombre">Nombres</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombres">
+                                            <label for="ci">Descripción de Curso</label>
+                                            <input type="hidden" id="id" name="id">
+                                            <input id="ci" class="form-control" type="mensaje" name="ci" placeholder="Ingrese la Descripción">
                                         </div>
                                         <div class="form-group">
-                                            <label for="nombre">Apellidos</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Apellido">
+                                            <label for="nombre">Fecha </label>
+                                            <input id="fecha" class="form-control" type="date" name="nombre" placeholder="Ingrese Fecha">
                                         </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="correo">Costo (Bs.)</label>
+                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese su Costo">
+                                        </div>
+                                      
                                           <div class="form-group">
-                                            <label for="nombre">Seleccione Curso</label>
+                                            <label for="curso">Seleccione Laboratorio</label>
                                             <select class="form-control" aria-label="Default select example">
-                                                <option selected>Cursos y Talleres</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option selected>Seleccionar</option>
+                                                <option value="1">Software I</option>
+                                                <option value="2">Software II</option>
+                                                <option value="3">Seguridad Informática</option>
+                                                <option value="4">Computacion Movil</option>
                                               </select>
                                           </div>
                                     
@@ -434,7 +450,17 @@
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
         <script src="/Assets/js/funciones.js"></script>
+      
+        
+     <!-- Page datatable plugins -->
+     <script src="/Assets/js/jquery.dataTables.min.js"></script>
+     <script src="/Assets/js/dataTables.bootstrap4.min.js"></script>
 
+    <!-- Page level custom scripts -->
+    <script src="/Assets/js/datatables-demo.js"></script>
+  
+<!-- alert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
