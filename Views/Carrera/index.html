@@ -22,9 +22,6 @@
     <!-- Custom styles for this template-->
     <link href="/Assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-      <!-- datatable -->
-      <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -46,11 +43,36 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-          
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/Views/panel.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Panel</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-    <!-- *********************************************************************************** -->
+
+            <!-- Heading -->
+<!-- *********************************************************************** -->
+            <li class="nav-item">
+                <a class="nav-link" href="/Views/Usuario/index.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Usuarios</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Cursos</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                 <i class="fa-solid fa-users-between-lines"></i>
+                    <span>Participantes</span></a>
+            </li>
+           
+      
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -60,43 +82,12 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item" href="/Views/Carrera/index.html">Ing. Informática</a>
-                        <a class="collapse-item" href="/Views/Usuario/index.html">Usuarios</a>
+                      
+                        <a class="collapse-item" href="#">Ing. Informática</a>
+                       
                     </div>
-
                 </div>
-
             </li>
-            <!-- Heading -->
-<!-- *********************************************************************** -->
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Participantes/index.html">
-        <i class="fa-solid fa-users-between-lines"></i>
-        <span>Participantes</span></a>
-</li>
-<!-- Nav Item - Tables -->
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Cursos</span></a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-chalkboard-user"></i>
-        <span>Expositores</span></a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-users-rays"></i>
-        <span>Cordinadores y Becarios</span></a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-file-pdf"></i>
-        <span>Reportes</span></a>
-</li>
             <!-- ************************************************** -->
 
 
@@ -255,118 +246,62 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- USUARIO ****************************************************************** -->
-                    <div class="app-title ">
-                        <div>
-                            <h2></i> Usuarios</h2>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary mb-4" type="button" onclick="frmUsuario();">Nuevo <i
-                            class="fa-solid fa-user-plus"></i></button>
-                  
-                   <!-- DataTales Example -->
-                   <div class="card shadow mb-4">
+                    <!-- part****************************************************************** -->
                    
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombres</th>
-                                        <th>Usuario</th>
-                                        <th>Estado</th>
-                                        <th></th>
-                                    
-                                    </tr>
-                                </thead>
-                               
-                                <tbody>
-                        
-                                    <tr>
-                                        <td>1 </td>
-                                        <td>Eliseo</td>
-                                        <td>Admin</td>
-                                        <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
 
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Elmer</td>
-                                        <td>Admin </td>
-                                        <td><span class="badge badge-success">Activo</span></td>
-                                                  <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
-
-                                    
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sonia</td>
-                                        <td>user</td>
-                                        <td><span class="badge badge-danger">Inactivo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="btnEditarUser"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarUser"><i class="fa-solid fa-trash"></i></button></td>
-
-                                      
-                                    </tr>
-                              
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+<!-- ******************************************** -->
 
 
-                    <!-- FIN DE USUARIO -->
+<!-- Carrera ****************************************************************** -->
 
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-                    <!-- Modal -->
-                    <div id="nuevo_usuario" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header bg-primary">
-                                    <h5 class="modal-title text-white" id="title">Nuevo Usuario</h5>
-                                    <button class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="post" id="frmUsuario">
-                                        <div class="form-group">
-                                            <label for="usuario">Usuario</label>
-                                            <input type="hidden" id="id" name="id">
-                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombre del usuario">
-                                        </div>
-                                        <div class="row" id="claves">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="clave">Contraseña</label>
-                                                    <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="confirmar">Confirmar Contraseña</label>
-                                                    <input id="confirmar" class="form-control" type="password" name="confirmar" placeholder="Confirmar contraseña">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary" type="button" onclick="registrarUser(event);" id="btnAccion">Registrar</button>
-                                        <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin del modal -->
-                    <!-- ******************************************************* -->
+<div class="card ">
+    <div class="card-header text-center">
+        Datos de la Carrera
+        <!--<?php print_r($data); ?> Para mostrar datos de la empresa--> 
+    </div>
+    <div class="card-body ">
+       <form id="frmConfig">
+    <div class="row">
+        <div class="col-md-6">
+        <div class="form-group">
+        
+            <input id="id" class="form-control" type="hidden" name="id" placeholder="id" value="<?php echo $data['id'] ?>">
+            <label for="nombre">Nombre Carrera</label>
+            <input id="nombre" class="form-control activete" type="text" name="nombre" placeholder="Ing. Informática">
+        </div>
+        </div>
+       
+        <div class="col-md-6">
+        <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input id="telefono" class="form-control" type="text" name="telefono" placeholder="72737003"  >
+        </div>
+        </div>
 
+        <div class="col-md-6">
+        <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input id="direccion" class="form-control" type="text" name="direccion" placeholder="Carretera a Catavi" >
+        </div>
+        </div>
+
+        <div class="col-md-6">
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" class="form-control" name="mensaje" rows="3" placeholder="Mensaje" ></textarea>
+        </div>
+        </div>
+         
+
+
+    </div>
+
+       <button class="btn btn-primary" type="button" onclick="modificarEmpresa()">Modificar</button>
+
+       </form>
+    </div>
+</div>
+<?php include "Views/Templates/footer.php";?>   
 
 
 
@@ -430,14 +365,6 @@
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
         <script src="/Assets/js/funciones.js"></script>
-      
-        
-     <!-- Page datatable plugins -->
-     <script src="/Assets/js/jquery.dataTables.min.js"></script>
-     <script src="/Assets/js/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="/Assets/js/datatables-demo.js"></script>
 
 </body>
 

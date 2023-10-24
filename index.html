@@ -1,169 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/Assets/img/logo_infor.png" rel="icon">
-    <!-- Link de iconos -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-<!-- link de bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <!-- link de css -->
 
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-    <!-- css  theme -->
-    <link href="Assets/css/theme.css" rel="stylesheet" />
-    <!-- link de Contactos -->
-    <link rel="stylesheet" type="text/css" href="/Assets/css/modal.css">
-    
-    <title>Infor Registro Cursos</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/Assets/img/logo_infor.png" rel="icon">
+  <!-- Link de iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- link de bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- link de css -->
 
-  <body>
-    <header class="header"><a class="navbar-brand" href="index.html"><img src="Assets/img/Logo.png" alt="" /></a>
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <!-- css  theme -->
+  <link href="Assets/css/theme.css" rel="stylesheet" />
+  <!-- link de Contactos -->
+  <link rel="stylesheet" type="text/css" href="/Assets/css/modal.css">
+
+  <title>Infor Registro Cursos</title>
+</head>
+
+<body>
+  <header class="header"><a class="navbar-brand" href="index.html"><img src="Assets/img/Logo.png" alt="" /></a>
 
 
     <!--parte de navegacion -->
-      <nav class="navbar">
+    <nav class="navbar">
 
-        <a href="index.html" class="active">Inicio</a>
-        <a href="#mencion">Menciones</a>
-        <a href="./Views/login.html" class="activete">Acceder</a>
-      </nav>
-     
-     
-    </header>
-   <!-- ============================================cni-->
-     <!-- ============================================-->
-      <!-- <section> Home ============================-->
+      <a href="index.html" class="active">Inicio</a>
+      <a href="#mencion">Menciones</a>
+      <a href="./Views/login.html" class="activete">Acceder</a>
+    </nav>
 
-    <section class="home">
-        <!-- Contenedor principal de la sección "home" -->
-      <div class="home-content">
-          <!-- Título principal -->
-        <h2 >Registro de Cursos y Talleres  Ingeniería Informática</h2>
+
+  </header>
+  <!-- ============================================cni-->
+  <!-- ============================================-->
+  <!-- <section> Home ============================-->
+
+  <section class="home">
+    <!-- Contenedor principal de la sección "home" -->
+    <div class="home-content">
+      <!-- Título principal -->
+      <h2>Registro de Cursos y Talleres Ingeniería Informática</h2>
       <h3></h3>
-        <p>
-          Sistema de seguimiento que se utiliza para almacenar información sobre los cursos y talleres disponibles, así como la información relevante. 
-        </p>
-         <!-- Contenedor de botones -->
-        <div class="btn-box">
-  
-          <a id="openModalBtn" href="#">Cursos y Talleres</a>
-        
-    <!-- Modal de Cursos -->
+      <p>
+        Sistema de seguimiento que se utiliza para almacenar información sobre los cursos y talleres disponibles, así
+        como la información relevante.
+      </p>
+      <!-- Contenedor de botones -->
+      <div class="btn-box">
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
+        <a id="openModalBtn" href="#">Cursos y Talleres</a>
+
+        <!-- Modal de Cursos -->
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
             <span id="closeModalBtn" class="close">&times;</span>
-              <h2>CURSO DE PHOTOSHOP DESDE CERO</h2>
-              <h3>GRATIS</h3>
+            <h2>CURSO DE PHOTOSHOP DESDE CERO</h2>
+            <h3>GRATIS</h3>
             <p>Aprende a usar Photoshop como un PRO.</p>
             <form action="" method="post">25/Octubre/ 2023</form>
             <br>
-            <button id="frmpart" type="button">  Inscribirse <i class="fa-solid fa-pen"></i></button>
-            <hr>
-            <h2>TALLER DE FOTOGRAFIA</h2>
-            <h3>GRATIS</h3>
-          <p>Está dirigido especialmente para fotógrafos que no han tenido ninguna formación previa o que aún tienen algunas dudas sobre conceptos y técnicas importantes..</p>
-        
-          <form action="" method="post">30 /Octubre/ 2023</form>
-          <br>
-          <button id="frmpart" type="button" >  Inscribirse <i class="fa-solid fa-pen"></i></button>
-        </div>
-    </div>
- <!-- Script para abrir el modal sadasdasdadadadadada-->
-<!--  -->
-<!-- Modal -->
-<div id="nuevo_part" class="modal">
-  <div class="modal-content">
-      <span id="frmpartclo" class="close">&times;</span>
+            <button id="frmpart" type="button"> Inscribirse <i class="fa-solid fa-pen"></i></button>
 
-      <div class="modal-body">
-        <form method="post" id="frmPart">
-            <div class="form-group">
-             
-               <br>
-                <input id="usuario" class="form-control " type="text" name="usuario" placeholder=" Ci">
-            </div>
-            <div class="form-group">
-               <br>
-                <input id="nombre" class="form-control" type="text" name="nombre" placeholder=" Nombres">
-            </div>
-            <div class="form-group">
-          <br>
-                <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Apellido">
-            </div>
-           
-        <br>
-            <button class="btn btn-primary" type="button" onclick="registrarPart(event);" id="btnAccion">Registrar</button>
-            <button id="frmpartclo" class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-        </form>
-    </div>
-
-  </div>
-</div>
-<!-- Fin del modal -->
-
-
-
-<!--  -->
-
-    <!-- Fin de Modal -->
-
-        </div>
-      </div>
-      <div class="home-sci">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://wa.me/72737903"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://t.me/cni_01"><i class="fa-brands fa-telegram"></i></i></a>
-      </div>
-      <span class="home-imgHover"></span>
-    </section>
- <!-- ============================================-->
-
-
- <section id="mencion" class="menciones">
- <!-- <section> begin ============================-->
-        <div class="container">
-          <h2 class="mx-auto text-center fs-lg-5 fs-md-5 w-lg-30 fw-bold">DOS MENCIONES Y UN INSTITUTO DE INVESTIGACIÓN</h2>
-          <div class="row gx-xl-7 mt-5">
-            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/1.png" alt="" />
-              <h4 class="mt-3 my-1 text-center fw-bold">SEGURIDAD INFORMÁTICA</h4>
-              <p class="text-sm-start">La mención "Seguridad informática" es una disciplina fundamental en el mundo digital actual. Se enfoca en la protección de sistemas, redes, datos y recursos informáticos contra amenazas. </p>
-            </div>
-            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/2.png" alt="" />
-              <h4 class="mt-3 my-1 text-center fw-bold">COMPUTACIÓN MOVIL</h4>
-              <p class="text-sm-start">La mención en "Computación Móvil" es un enfoque especializado dentro del amplio campo de la informática que se centra en el desarrollo de aplicaciones, sistemas y tecnologías para dispositivos móviles. </p>
-            </div>
-            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/3.png" alt="" />
-              <h4 class="mt-3 my-1 text-center fw-bold">INSTITUTO IIDAI</h4>
-              <p class="text-sm-start">Es un centro de investigación científica y tecnológica en el área de la informática, perteneciente a la carrera de Ingeniería Informática de la Universidad Nacional “Siglo XX” en Llallagua, Bolivia    .</p>
-            </div>
           </div>
         </div>
-        <!-- end of .container-->
-      <footer>
-        
-        <section>
-        
-        </section>
+        <!-- Script para abrir el modal sadasdasdadadadadada-->
+        <!--  -->
+        <!-- Modal -->
+        <div id="nuevo_part" class="modal">
+          <div class="modal-content">
+            <span id="frmpartclo" class="close">&times;</span>
 
-      </footer>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-  
-        <script src="/Assets/js/modal.js"></script>
+            <div class="modal-body">
+              <form method="post" id="frmPart">
+                <div class="form-group">
+
+                  <br>
+                  <input id="usuario" class="form-control " type="text" name="usuario" placeholder=" Ci">
+                </div>
+                <div class="form-group">
+                  <br>
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder=" Nombres">
+                </div>
+                <div class="form-group">
+                  <br>
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Apellido">
+                </div>
+
+                <br>
+                <button class="btn btn-primary" type="button" onclick="registrarPart(event);"
+                  id="btnAccion">Registrar</button>
+                <button id="frmpartclo" class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <!-- Fin del modal -->
+
+
+
+        <!--  -->
+
+        <!-- Fin de Modal -->
+
+      </div>
+    </div>
+    <div class="home-sci">
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://wa.me/72737903"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://t.me/cni_01"><i class="fa-brands fa-telegram"></i></i></a>
+    </div>
+    <span class="home-imgHover"></span>
+  </section>
+  <!-- ============================================-->
+
+
+  <section id="mencion" class="menciones">
+    <!-- <section> begin ============================-->
+    <div class="container">
+      <h2 class="mx-auto text-center fs-lg-5 fs-md-5 w-lg-30 fw-bold">DOS MENCIONES Y UN INSTITUTO DE INVESTIGACIÓN</h2>
+      <div class="row gx-xl-7 mt-5">
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/1.png"
+            alt="" />
+          <h4 class="mt-3 my-1 text-center fw-bold">SEGURIDAD INFORMÁTICA</h4>
+          <p class="text-sm-start">La mención "Seguridad informática" es una disciplina fundamental en el mundo digital
+            actual. Se enfoca en la protección de sistemas, redes, datos y recursos informáticos contra amenazas. </p>
+        </div>
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/2.png"
+            alt="" />
+          <h4 class="mt-3 my-1 text-center fw-bold">COMPUTACIÓN MOVIL</h4>
+          <p class="text-sm-start">La mención en "Computación Móvil" es un enfoque especializado dentro del amplio campo
+            de la informática que se centra en el desarrollo de aplicaciones, sistemas y tecnologías para dispositivos
+            móviles. </p>
+        </div>
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="Assets/img/3.png"
+            alt="" />
+          <h4 class="mt-3 my-1 text-center fw-bold">INSTITUTO IIDAI</h4>
+          <p class="text-sm-start">Es un centro de investigación científica y tecnológica en el área de la informática,
+            perteneciente a la carrera de Ingeniería Informática de la Universidad Nacional “Siglo XX” en Llallagua,
+            Bolivia .</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of .container-->
+    <footer>
+
+      <section>
+
+      </section>
+
+    </footer>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <script src="/Assets/js/modal.js"></script>
     <script src="./Assets/js/index.js"></script>
-  <!-- js de bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- 
-<script src="/Assets/js/funciones.js"></script>
+    <!-- js de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+    <script src="/Assets/js/funciones.js"></script>
 </body>
+
 </html>

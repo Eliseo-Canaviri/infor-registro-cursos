@@ -252,8 +252,11 @@
 <!-- ******************************************** -->
 
 
-<div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Participantes</h6>
+<!-- USUARIO ****************************************************************** -->
+<div class="app-title ">
+    <div>
+        <h2></i> Participantes</h2>
+    </div>
 </div>
                     <button class="btn btn-primary mb-2" type="button" onclick="frmPart();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
@@ -348,7 +351,15 @@
                                             <label for="nombre">Apellidos</label>
                                             <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Apellido">
                                         </div>
-                                       
+                                          <div class="form-group">
+                                            <label for="nombre">Seleccione Curso</label>
+                                            <select class="form-control" aria-label="Default select example">
+                                                <option selected>Cursos y Talleres</option>
+                                                <option value="1">JAVA</option>
+                                                <option value="2">PHP</option>
+                                                <option value="3">OTROS</option>
+                                              </select>
+                                          </div>
                                     
                                         <button class="btn btn-primary" type="button" onclick="registrarPart(event);" id="btnAccion">Registrar</button>
                                         <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
