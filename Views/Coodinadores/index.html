@@ -278,7 +278,9 @@
                                         <th>Nombres</th>
                                         <th>Celular</th>
                                         <th>Tipo</th>
+                                        <th> Laboratorio</th>
                                         <th>Estado</th>
+                                       
                                         <th></th>                              
                                     </tr>
                                 </thead>
@@ -287,9 +289,10 @@
                         
                                     <tr>
                                         <td>1 </td>                                
-                                        <td>Jose</td>                          
+                                        <td>Fidel Lopez</td>                          
                                         <td>785433</td>
-                                        <td>Cordinador (Computacion Movil)</td>
+                                        <td>Coordinador </td>
+                                        <td>Seguridad Informática</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
@@ -299,7 +302,8 @@
                                         <td>1 </td>                                
                                         <td>Eliseo Canaviri</td>                          
                                         <td>785433</td>
-                                        <td>Becario (Software I)</td>
+                                        <td>Becario </td>
+                                        <td>Software I</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
@@ -309,7 +313,8 @@
                                         <td>1 </td>                                
                                         <td>Hilda</td>                          
                                         <td>785433</td>
-                                        <td>Cordinador (Software II)</td>
+                                        <td>Becario</td>
+                                        <td>Hardware</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
@@ -339,9 +344,9 @@
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
                                         <div class="form-group">
-                                            <label for="ci">Nombres y Apellidos</label>
+                                            <label for="ci">Nombres</label>
                                             <input type="hidden" id="id" name="id">
-                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese su CI">
+                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese Nombres y Apellidos ">
                                         </div>
                                         
                                         
@@ -351,7 +356,7 @@
                                             <input id="celuar" class="form-control" type="text" name="celuar" placeholder="Ingrese su Celular">
                                         </div>
                                           <div class="form-group">
-                                            <label for="curso">Seleccione Curso</label>
+                                            <label for="curso">Seleccione Rol </label>
                                             <select class="form-control" aria-label="Default select example">
                                                 <option selected>Seleccionar</option>
                                                 <option value="1">Coodinador</option>
@@ -359,8 +364,18 @@
                                                
                                               </select>
                                           </div>
+                                          <div class="form-group">
+                                            <label for="curso">Seleccione Laboratorio</label>
+                                            <select class="form-control" aria-label="Default select example">
+                                                <option selected>Seleccionar</option>
+                                                <option value="1">Software I</option>
+                                                <option value="2">Software II</option>
+                                                <option value="2">Seguridad Informática</option>
+                                               
+                                              </select>
+                                          </div>
                                     
-                                        <button class="btn btn-primary" type="button" onclick="registrarPart(event);" id="btnAccion">Registrar</button>
+                                        <button class="btn btn-primary" type="button" onclick="registrarCoordi(event);" id="btnAccion">Registrar</button>
                                         <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                                     </form>
                                 </div>

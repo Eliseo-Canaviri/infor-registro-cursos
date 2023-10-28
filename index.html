@@ -19,10 +19,14 @@
   <link href="Assets/css/theme.css" rel="stylesheet" />
   <!-- link de Contactos -->
   <link rel="stylesheet" type="text/css" href="/Assets/css/modal.css">
-    <!-- datatable -->
-    <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <!-- alert2 -->
-    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
+  <!-- datatable -->
+  <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <!-- alert2 -->
+  <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
+
+
+  <!-- Alerta toastr CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
   <title>Infor Registro Cursos</title>
 </head>
@@ -68,14 +72,15 @@
             <h2>CURSO DE PHOTOSHOP DESDE CERO</h2>
             <h3>GRATIS</h3>
             <p>Aprende a usar Photoshop como un PRO.</p>
-            <form action="" method="post">25/Octubre/ 2023</form>
+            <form action="" method="post">31/Octubre/ 2023</form>
             <br>
             <button id="frmpart" type="button"> Inscribirse <i class="fa-solid fa-pen"></i></button>
 
+
+
           </div>
         </div>
-        <!-- Script para abrir el modal sadasdasdadadadadada-->
-        <!--  -->
+        
         <!-- Modal -->
         <div id="nuevo_part" class="modal">
           <div class="modal-content">
@@ -84,53 +89,53 @@
             <div class="modal-body">
               <form method="post" id="frmPart">
                 <div class="form-group">
-                    <h2> Ingrese Sus Datos </h2>
-                  <br>
-                  <input id="ci" class="form-control " type="text" name="usuario" placeholder=" Ingrese Ci">
+                  <h2> Ingrese Sus Datos </h2>
+                  <p>Todos los Campos Son Obligatorios (*)</p>
+              
+                </div>
+                <div class="form-group">
+                
+                  <input id="nombre" class="form-control" type="text" name="nombre"
+                    placeholder="Ingrese Nombres y Apellidos">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Nombres y Apellidos">
+                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese # Celular">
                 </div>
                 <div class="form-group">
                   <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Celular">
-                </div>
-                <div class="form-group">
-                  <br>
-                  <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Correo">
+                  <input id="nombre" class="form-control" type="email" name="nombre" placeholder="Ingrese   Correo">
                 </div>
                 <div class="form-group">
                   <br>
                   <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese residencia">
                 </div>
-<!-- selec -->
-<div class="formulario">
- 
-  <select id="grado" name="grado">
-    <option value="primaria">Selecione (Grado)</option>
-      <option value="preescolar">1°</option>
-      <option value="secundaria">2° </option>
-      <option value="preparatoria">3°</option>
-      <option value="universidad">4°</option>
-      <option value="universidad">5°</option>
-      <option value="universidad">otros</option>
-  </select>
-</div>
-<!-- finde select -->
+                <!-- selec -->
+                <div class="formulario">
+
+                  <select id="grado" name="grado">
+                    <option value="primaria">Selecione (Grado que esta)</option>
+                    <option value="preescolar">1°</option>
+                    <option value="secundaria">2° </option>
+                    <option value="preparatoria">3°</option>
+                    <option value="universidad">4°</option>
+                    <option value="universidad">5°</option>
+                    <option value="universidad">otros</option>
+                  </select>
+                </div>
+                <!-- finde select -->
                 <br>
-                <button onclick="registrarPart(event);" class="btn btn-primary" type="button" id="btnAccion">Registrar</button>
-                <button id="frmpartclo" class="btn btn-danger"  type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary"type="button" id="alerta">Enviar</button>
+
+                
+          
+           
               </form>
             </div>
 
           </div>
         </div>
         <!-- Fin del modal -->
-
-
-
-        <!--  -->
 
         <!-- Fin de Modal -->
 
@@ -194,14 +199,35 @@
     <script src="/Assets/js/funciones.js"></script>
 
 
-     <!-- Page datatable plugins -->
-     <script src="/Assets/js/jquery.dataTables.min.js"></script>
-     <script src="/Assets/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Page datatable plugins -->
+    <script src="/Assets/js/jquery.dataTables.min.js"></script>
+    <script src="/Assets/js/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="/Assets/js/datatables-demo.js"></script>
-<!-- alert2 -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <!-- alert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <!-- librerias de alertas  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Alerta toastr Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Script para mostrar la alerta  -->
+    <script>
+
+      const alerta = document.querySelector('#alerta');
+
+      alerta.addEventListener('click', () => {
+        //console.log('diste click');
+        toastr.success('👩🏻‍💻', 'Enviado', {
+          "progressBar": true,
+          "positionClass": "toast-top-center"
+        });
+      })
+
+    </script>
+<!-- Fin de script de alerta  -->
+
 </body>
 
 </html>

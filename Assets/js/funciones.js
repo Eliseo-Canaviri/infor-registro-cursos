@@ -155,33 +155,115 @@ function registrarPart(e) {
   }
 }
 
+function registrarCoordi(e) {
+  e.preventDefault();
+  const ci = document.getElementById("ci");
 
 
+  
+  if (ci.value == "" ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todo los campos son obligatorios ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Registrado con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    $("#nuevo_part").modal("hide"); //para que no se oculte el modal
 
 
+  }
+}
+function registrarCursos(e) {
+  e.preventDefault();
+  const ci = document.getElementById("ci");
 
 
+  
+  if (ci.value == "" ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todo los campos son obligatorios ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Registrado con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    $("#nuevo_part").modal("hide"); //para que no se oculte el modal
 
 
+  }
+}
+function registrarExpo(e) {
+  e.preventDefault();
+  const ci = document.getElementById("ci");
 
 
+  
+  if (ci.value == "" ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todo los campos son obligatorios ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Registrado con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    $("#nuevo_part").modal("hide"); //para que no se oculte el modal
 
 
+  }
+}
+
+function registrarLabo(e) {
+  e.preventDefault();
+  const ci = document.getElementById("ci");
 
 
+  
+  if (ci.value == "" ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todo los campos son obligatorios ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Registrado con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    $("#nuevo_part").modal("hide"); //para que no se oculte el modal
 
 
-
-
-
-
-
-
-
-
-
-
-
+  }
+}
 
 function frmCambiarPass(e) {
   e.preventDefault();
