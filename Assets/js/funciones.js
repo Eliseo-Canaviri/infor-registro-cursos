@@ -145,7 +145,7 @@ function registrarUser(e) {
       showConfirmButton: false,
       timer: 1500,
     });
-    $("#nuevo_part").modal("hide"); //ocultar modal
+    $("#nuevo_usuario").modal("hide"); //ocultar modal
   }
 }
 
