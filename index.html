@@ -74,7 +74,7 @@
             <p>Aprende a usar Photoshop como un PRO.</p>
             <form action="" method="post">31/Octubre/ 2023</form>
             <br>
-            <button id="frmpart" type="button"> Inscribirse <i class="fa-solid fa-pen"></i></button>
+            <button id="frmpart" onclick ="button"> Inscribirse <i class="fa-solid fa-pen"></i></button>
 
 
 
@@ -213,15 +213,22 @@
     <!-- Script para mostrar la alerta  -->
     <script>
 
-      const alerta = document.querySelector('#alerta');
 
+
+      const alerta = document.querySelector('#alerta');
+   
       alerta.addEventListener('click', () => {
         //console.log('diste click');
         toastr.success('👩🏻‍💻', 'Enviado', {
           "progressBar": true,
           "positionClass": "toast-top-center"
         });
+       
       })
+    alerta.onclick = function() {
+    nuevo_part.style.display = "none";
+}
+
 
     </script>
 <!-- Fin de script de alerta  -->

@@ -8,6 +8,8 @@ var nuevo_part = document.getElementById("nuevo_part");
 
 // Obtén el botón de cerrar el modal
 var frmpartclo = document.getElementById("frmpartclo");
+var x = document.getElementById("xmodal");
+
 var closeModalBtn = document.getElementById("closeModalBtn");
 
 // Asigna una función para abrir el modal
@@ -22,6 +24,9 @@ closeModalBtn.onclick = function() {
     modal.style.display = "none";
 }
 frmpartclo.onclick = function() {
+    nuevo_part.style.display = "none";
+}
+x.onclick = function() {
     nuevo_part.style.display = "none";
 }
 
