@@ -1,3 +1,28 @@
+$(document).ready(function() {
+  $('#dataTable').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
+            'excel', 'pdf', 'print'
+      ]
+   
+  } );
+  
+} );
+$(document).ready(function() {
+  $('#dataTable1').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
+          'excel', 'pdf', 'print'
+      ]
+   
+  } );
+  
+} );
+
+
+
+
+
 /* Se crea una función llamada frmLogin que toma un parámetro 'e' que probablemente sea un evento (por ejemplo, un evento de envío de formulario). */
 function frmLogin(e) {
   e.preventDefault(); // Previene el comportamiento predeterminado del evento (por ejemplo, evitar que el formulario se envíe).
@@ -69,6 +94,32 @@ function frmlabo() {
   document.getElementById("id").value = "";
   $("#nuevo_part").modal("show");
 }
+
+function frmBuscar() {
+  document.getElementById("title").textContent = "Cursos  ";
+  $("#nuevo_buscar").modal("show");
+}
+function frmBuscar1() {
+  document.getElementById("title").textContent = "Seleccione una Plantilla";
+  $("#nuevo_buscar1").modal("show");
+}
+//********************************************************************************************************* */
+function registrarBusc(e) {
+  e.preventDefault();
+ 
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Curso Selecciona con exito ☺",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    $("#nuevo_buscar").modal("hide"); //ocultar modal
+
+}
+
+
+
 function registrarUser(e) {
   e.preventDefault();
 
@@ -128,15 +179,12 @@ function btnEliminarPart(id) {
 
 function registrarPart(e) {
   e.preventDefault();
-  const ci = document.getElementById("ci");
+
   const nombre = document.getElementById("nombre");
-  const apellido = document.getElementById("apellido");
-  const telefono = document.getElementById("telefono");
-  const email = document.getElementById("email");
-  $("#nuevo_part").modal("hide"); //ocultar modal
+  
+  
 
-
-  if (ci.value == "" || nombre.value == "") {
+  if ( nombre.value == "") {
     Swal.fire({
       position: "top-end",
       icon: "warning",
@@ -152,16 +200,18 @@ function registrarPart(e) {
       showConfirmButton: false,
       timer: 1500,
     });
+    $("#nuevo_part").modal("hide"); //ocultar modal
+
   }
 }
 
 function registrarCoordi(e) {
   e.preventDefault();
-  const ci = document.getElementById("ci");
+  const nombre= document.getElementById("nombre");
 
 
   
-  if (ci.value == "" ) {
+  if (nombre.value == "" ) {
     Swal.fire({
       position: "top-end",
       icon: "warning",
@@ -211,11 +261,11 @@ function registrarCursos(e) {
 }
 function registrarExpo(e) {
   e.preventDefault();
-  const ci = document.getElementById("ci");
+  const nombre = document.getElementById("nombre");
 
 
   
-  if (ci.value == "" ) {
+  if (nombre.value == "" ) {
     Swal.fire({
       position: "top-end",
       icon: "warning",
@@ -236,7 +286,6 @@ function registrarExpo(e) {
 
   }
 }
-
 function registrarLabo(e) {
   e.preventDefault();
   const ci = document.getElementById("ci");

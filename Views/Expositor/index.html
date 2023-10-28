@@ -93,12 +93,7 @@
         <i class="fa-solid fa-users-rays"></i>
         <span>Cordinadores y Becarios</span></a>
 </li>
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-file-pdf"></i>
-        <span>Reportes</span></a>
-</li>
-            <!-- ************************************************** -->
+    <!-- ************************************************** -->
 
 
 
@@ -275,9 +270,8 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th>ID</th>
-                                        <th>CI</th>
-                                        <th>Grado</th>
                                         <th>Nombres</th>
+                                        <th>Apellidos</th>                      
                                         <th>Celular</th>
                                         <th>Correo</th>
                                         <th>Residencia</th>
@@ -290,9 +284,8 @@
                         
                                     <tr>
                                         <td>1 </td>
-                                        <td>4353</td>
-                                        <td>Lic.</td>
-                                        <td>Carlos Lopez M.</td>
+                                        <td>Ing.Carlos</td>
+                                        <td>Gonzalez M.</td>
                                         <td>97654321</td>
                                         <td>carlos123@gmail.com</td>
                                         <td>Llallagua</td>
@@ -304,9 +297,8 @@
                                     </tr>
                                     <tr>
                                         <td>1 </td>
-                                        <td>345765</td>
-                                        <td>Ing.</td>
-                                        <td>Mario Choque R.</td>
+                                       <td>Lic. Mario</td>
+                                       <td>Perez G.</td>
                                         <td>97654321</td>
                                         <td>mario123@gmail.com</td>
                                         <td>La paz</td>
@@ -318,9 +310,8 @@
                                     </tr>
                                     <tr>
                                         <td>1 </td>
-                                        <td>5464564</td>
-                                        <td>Lic.</td>
-                                        <td>Sandra Mamani j.</td> 
+                                        <td>Ing. Sandra</td> 
+                                        <td>Mamani R.</td>
                                         <td>97654321</td>
                                         <td>sandra123@gmail.com</td>
                                         <td>Oruro</td>
@@ -353,18 +344,15 @@
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
+                                      
                                         <div class="form-group">
-                                            <label for="ci">ci</label>
                                             <input type="hidden" id="id" name="id">
-                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese su CI">
+                                            <label for="nombre">Nombres</label>
+                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Nombre">
                                         </div>
                                         <div class="form-group">
-                                            <label for="nombre">Grado</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese el Grado">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nombre">Nombres y Apellidos</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Su Nombre y Apellidos">
+                                            <label for="nombre">Apellidos</label>
+                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese  Apellidos">
                                         </div>
                                         
                                         <div class="form-group">

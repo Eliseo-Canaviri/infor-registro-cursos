@@ -26,7 +26,10 @@
       <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
       <!-- alert2 -->
       <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
-</head>
+<!-- reporte -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+    </head>
 
 <body id="page-top">
 
@@ -93,11 +96,7 @@
         <i class="fa-solid fa-users-rays"></i>
         <span>Cordinadores y Becarios</span></a>
 </li>
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-file-pdf"></i>
-        <span>Reportes</span></a>
-</li>
+
             <!-- ************************************************** -->
 
 
@@ -271,15 +270,16 @@
                    
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
                                 <thead class="thead-light">
                                     <tr>
                                         <th>ID</th>
-                                        <th>CI</th>
+                             
                                         <th>Nombres</th>
                                         <th>Correo</th>
-                                        <th>Telefono</th>
+                                        <th>Celular</th>
                                         <th>Evento</th>
+                                        <th>Grado</th>
                                         <th>Estado</th>
                                         <th></th>                              
                                     </tr>
@@ -289,37 +289,44 @@
                         
                                     <tr>
                                         <td>1 </td>
-                                        <td>34578934</td>
+                              
                                         <td>Jose</td>
                                         <td>jose123@gmail.com</td>
                                         <td>97654321</td>
-                                        <td>Congreso 2023</td>
+                                        <td>Curso CSSS</td>
+                                        <td>Primero</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart('1')"><i class="fa-solid fa-trash"></i></button></td>
 
                                         
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>78343564</td>
+                                        <td>2</td>
+                              
                                         <td>Yairt</td>
                                         <td>Yairt123@gmail.com</td>
                                         <td>97654321</td>
                                         <td>Curso de PHP</td>
+                                        <td>Segundo</td>
                                         <td><span class="badge badge-success">Activo</span></td>
                                         <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
 
                                     
                                     </tr>
                                     <tr>
-                                        <td>1 </td>
-                                        <td>33543534</td>
+                                        <td>3 </td>
+                
                                         <td>Monica</td>
                                         <td>monica123@gmail.com</td>
                                         <td>97654321</td>
                                         <td>Curso Java </td>
+                                        <td>Tercero</td>
                                         <td><span class="badge badge-success">Activo</span></td>
-                                        <td><button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td>
+                                            <button class="btn btn-primary" type="button" onclick="frmPart()"><i class="fa-solid fa-pen-to-square"></i></button> 
+                                            <button class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i class="fa-solid fa-trash"></i></button>
+
+                                        </td>
 
                                       
                                     </tr>
@@ -346,24 +353,21 @@
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" id="frmPart">
-                                        <div class="form-group">
-                                            <label for="ci">ci</label>
+                                      
+                                        <div class="form-group">  
                                             <input type="hidden" id="id" name="id">
-                                            <input id="ci" class="form-control" type="text" name="ci" placeholder="Ingrese su CI">
-                                        </div>
-                                        <div class="form-group">
                                             <label for="nombre">Nombres y Apellidos</label>
-                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Su Nombre y Apellidos">
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="correo">Correo</label>
-                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese su Correo">
+                                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingrese Nombre y Apellidos">
                                         </div>
                                         <div class="form-group">
                                             <label for="telefono">Celular</label>
                                             <input id="celuar" class="form-control" type="text" name="celuar" placeholder="Ingrese su Celular">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="correo">Correo</label>
+                                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Ingrese su Correo">
+                                        </div>
+                                       
                                           <div class="form-group">
                                             <label for="curso">Seleccione Curso</label>
                                             <select class="form-control" aria-label="Default select example">
@@ -372,6 +376,20 @@
                                                 <option value="2">PHP</option>
                                                 <option value="3">Curso de PHP</option>
                                                 <option value="4">Curso Java</option>
+                                              </select>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="curso">Seleccione Grado</label>
+                                            <select class="form-control" aria-label="Default select example">
+                                                <option selected>Seleccionar</option>
+                                                <option value="1">Primero</option>
+                                                <option value="2">Segundo</option>
+                                                <option value="3">Tercero</option>
+                                                <option value="4">Cuarto</option>
+                                                <option value="5">Quinto</option>
+                                                <option value="6">Egresado</option>
+
+                                                                                                
                                               </select>
                                           </div>
                                     
@@ -459,6 +477,16 @@
   
 <!-- alert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Page level pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+   <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
 </body>
 
 </html>
