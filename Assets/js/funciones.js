@@ -29,19 +29,19 @@ function frmLogin(e) {
 
   // Obtener elementos del formulario por su ID
   const usuario = document.getElementById("usuario"); // Obtiene el elemento con ID "usuario"
-  const clave = document.getElementById("clave"); // Obtiene el elemento con ID "clave"
+  const password = document.getElementById("password"); // Obtiene el elemento con ID "clave"
 
   let validacionExitosa = true; // Inicializa una variable booleana como verdadera para rastrear la validación.
 
   // Comprueba si el campo de usuario o la clave están vacíos.
-  if (usuario.value === "" || clave.value === "") {
+  if (usuario.value === "" || password.value === "") {
     alert("Ingrese Usuario y Contraseña"); // Muestra una alerta si alguno de los campos está vacío.
     validacionExitosa = false; // Cambia la variable de validación a falso.
   }
 
   // Realiza más validaciones si la validación anterior fue exitosa.
   if (validacionExitosa) {
-    if (usuario.value === "admin" && clave.value === "admin") {
+    if (usuario.value === "admin" && password.value === "admin") {
       // Verifica si el usuario y la clave son "admin".
       window.location = "../Views/panel.html"; // Redirige a la página de panel si coinciden.
     } else {

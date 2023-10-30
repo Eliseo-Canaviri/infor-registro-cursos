@@ -1,31 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../Assets/css/stylelogin.css">
-    <title>Login</title>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="title"><samp>INICIAR SESIÓN</samp></div>
-        <form action="#">
-            <div class="row">   
-                <i class="fa-solid fa-user"></i>
-            
-                <input type="text" id="usuario" name="usuario" placeholder="admin">
-            </div>
-            <div class="row">   
-                <i class="fa-solid fa-lock"></i>
 
-                <input type="password" id="clave" name="clave" placeholder="admin">
-            </div>
-            <div class="row button">
-                <input class="btn" type="submit" onclick="frmLogin(event);" value="Login">
-            </div>
-        </form>
-    </div>
-   <script src="../Assets/js/funciones.js"></script>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Login ♣</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/Assets/css/my-login.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<!-- iconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+
+					<div class="text-center">
+						<img src="/Assets/img/logoI.png" alt="logo">
+					</div>
+					<div class="card fat ">
+						<div class="card-body">
+							<h1 class="card-title text-center text-secondary">Iniciar sesión</h1>
+							<form method="POST" class="my-login-validation" novalidate="">
+
+								<!-- usuario -->
+								<div class="col-auto mb-3">
+									<label class="font-weight-bold text-secondary" for="email">Usuario</label>
+
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+										</div>
+										<input type="text" class="form-control" name="email" value="" id="usuario"
+											placeholder="Usuario" required autofocus>
+										<div class="invalid-feedback">
+											Se requiere Usuario
+										</div>
+									</div>
+								</div>
+								
+								<!-- password -->
+								<div class="col-auto">
+									<label class="font-weight-bold text-secondary" for="password">Contraseña</label>
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
+										
+										</div>
+										<input id="password" type="password" name="password" class="form-control"
+											placeholder="Contraseña" required data-eye>
+											<!-- <div class="invalid-feedback">
+												Se requiere contraseña
+											</div> -->
+											
+									</div>
+
+								</div>
+								<br>
+								<div class="form-group m-0 text-center">		
+								<input class="btn-cni" type="submit" onclick="frmLogin(event);" value="Login">
+								</div>
+
+								
+
+								<div class="mt-4 text-center">
+									¿No tienes una cuenta?  <a href="/Views/registro.html">Crear Uno</a>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+		
+	<script src="/Assets/js/my-login.js"></script>
+	
+
 </body>
+
 </html>
