@@ -84,7 +84,7 @@ $(function() {
 		form.addClass('was-validated');
 	});
 });
-function frmLogin(e) {
+ /*function frmLogin(e) {
 	e.preventDefault(); // Previene el comportamiento predeterminado del evento (por ejemplo, evitar que el formulario se envíe).
   
 	// Obtener elementos del formulario por su ID
@@ -108,4 +108,28 @@ function frmLogin(e) {
 		alert("Error: El Usuario y la Contraseña no son correctos"); // Muestra un mensaje de error si no coinciden.
 	  }
 	}
-  }
+  }*/
+
+//acceso de login
+const FormLogin = document.querySelector('#FormLogin');
+FormLogin.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const usuario = document.querySelector('#usuario').value;
+    const password = document.querySelector('#password').value;
+    const Users = JSON.parse(localStorage.getItem('users')) || [];
+    const validarUser = Users.find(user => user.usuario === usuario && user.password === password);
+
+    if (!validarUser) {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'warning',
+            title: 'Usuario o Contraseña Incorrectos',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } else {
+        localStorage.setItem('login_success', JSON.stringify(validarUser));
+        window.location.href = 'panel.html';
+    }
+});

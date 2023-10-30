@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- alertas 2 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.min.css">
 </head>
 
 <body class="my-login-page">
@@ -25,6 +27,7 @@
 					<div class="text-center">
 						<img src="/Assets/img/logoI.png" alt="logo">
 					</div>
+					<form id="FormLogin">
 					<div class="card fat ">
 						<div class="card-body">
 							<h1 class="card-title text-center text-secondary">Iniciar sesión</h1>
@@ -32,7 +35,7 @@
 
 								<!-- usuario -->
 								<div class="col-auto mb-3">
-									<label class="font-weight-bold text-secondary" for="email">Usuario</label>
+									<label class="font-weight-bold text-secondary" for="usuario">Usuario</label>
 
 									<div class="input-group ">
 										<div class="input-group-prepend">
@@ -75,7 +78,9 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div>	
+					</form>
+					
 
 				</div>
 			</div>
@@ -89,6 +94,8 @@
 		
 	<script src="/Assets/js/my-login.js"></script>
 	
+	<!-- alerta 2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.all.min.js"></script>
 
 </body>
 

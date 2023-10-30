@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- alertas 2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.min.css">
+		<!-- alimacion de alerta 2  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="my-login-page">
@@ -23,65 +27,70 @@
                     <div class="text-center">
                         <img src="/Assets/img/logoI.png" alt="logo">
                     </div>
-
-                    <div class="card fat">
-                        <div class="card-body">
-                            <h1 class="card-title text-center text-secondary">Registrarse</h1>
-                            <form method="POST" class="my-login-validation" novalidate="">
-                                <div class="form-group">
-                                    <label class="font-weight-bold text-secondary" for="name">Nombres y Apellidos</label>
-                                    <input id="name" type="text" class="form-control" name="name" placeholder="Eliseo Canaviri" required autofocus >
-                                    <div class="invalid-feedback">
-                                        ¿Cómo te llamas?
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="font-weight-bold text-secondary"  for="email">Dirección de Correo Electrónico</label>
-                                    <input id="email" type="email" class="form-control" name="email" placeholder="admin123@gmail.com" required >
-                                    <div class="invalid-feedback">
-                                        Su correo electrónico no es válido
-                                    </div>
-                                </div>
-                                <!-- sdfsfsfsfs -->
-                                <div class="form-row">
-                                    <div class="col">
-                                        <label class="font-weight-bold text-secondary"  for="name">Usuario</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Ingrese Usuario"
-                                            required autofocus>
+                    <form id="FormRegistro">
+                        <div class="card fat">
+                            <div class="card-body">
+                                <h1 class="card-title text-center text-secondary">Registrarse</h1>
+                                <form method="POST" class="my-login-validation" novalidate="">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold text-secondary" for="name">Nombres y
+                                            Apellidos</label>
+                                        <input id="name" type="text" class="form-control" name="name"
+                                            placeholder="Eliseo Canaviri" required autofocus>
                                         <div class="invalid-feedback">
-                                            Se requiere Usuario
+                                            ¿Cómo te llamas?
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <label class="font-weight-bold text-secondary"  for="password">Contraseña</label>
-                                        <input id="password" type="password" class="form-control" placeholder="Ingrese Pass"
-                                            required data-eye>
 
+                                    <div class="form-group">
+                                        <label class="font-weight-bold text-secondary" for="email">Dirección de Correo
+                                            Electrónico</label>
+                                        <input id="email" type="email" class="form-control" name="email"
+                                            placeholder="admin123@gmail.com" required>
                                         <div class="invalid-feedback">
-                                            Se requiere contraseña
+                                            Su correo electrónico no es válido
                                         </div>
                                     </div>
-                                </div>
+                                    <!-- sdfsfsfsfs -->
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label class="font-weight-bold text-secondary" for="name">Usuario</label>
+                                            <input id="usuario" type="text" class="form-control"
+                                                placeholder="Ingrese Usuario" required autofocus>
+                                            <div class="invalid-feedback">
+                                                Se requiere Usuario
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label class="font-weight-bold text-secondary"
+                                                for="password">Contraseña</label>
+                                            <input id="password" type="password" class="form-control"
+                                                placeholder="Ingrese Pass" required data-eye>
 
-                                <!-- asfdsafsdfsfsd -->
+                                            <div class="invalid-feedback">
+                                                Se requiere contraseña
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <div class="form-group mb-4">
-                                  
-                                </div>
+                                    <!-- asfdsafsdfsfsd -->
 
-                                <div class="form-group m-0 text-center">
-                                    <button type="submit" class="btn-cni ">
-                                        Registrarse
-                                    </button>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    ¿Ya tienes una cuenta? <a href="/Views/login.html">Login</a>
-                                </div>
-                            </form>
+                                    <div class="form-group mb-4">
+
+                                    </div>
+
+                                    <div class="form-group m-0 text-center">
+                                        <button type="submit" class="btn-cni ">
+                                            Registrarse
+                                        </button>
+                                    </div>
+                                    <div class="mt-4 text-center">
+                                        ¿Ya tienes una cuenta? <a href="/Views/login.html">Login</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -91,7 +100,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+           <!-- alerta 2 -->
+	
     <script src="/Assets/js/my-login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.all.min.js"></script>
+
+    <script src="/Assets/js/registro.js"></script>
+
+ 
 </body>
 
 </html>
