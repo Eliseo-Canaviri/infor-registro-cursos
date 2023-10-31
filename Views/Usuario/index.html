@@ -26,9 +26,9 @@
     <link href="/Assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <!-- alert2 -->
     <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css " rel="stylesheet">
-<!-- reporte -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+    <!-- reporte -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
 </head>
 
 <body id="page-top">
@@ -54,6 +54,9 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+     
+            <!-- *********************************************************************** -->
+            <!-- inicio de panel -->
             <!-- *********************************************************************************** -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -65,42 +68,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="/Views/Carrera/index.html">Ing. Informática</a>
-                        <a class="collapse-item" href="/Views/Usuario/index.html">Usuarios</a>
+                        <a class="collapse-item" href="#" onclick="Carrera()">Ing. Informática</a>
+                        <a class="collapse-item" href="#" onclick="Usuario()">Usuarios</a>
                     </div>
 
                 </div>
 
             </li>
-            <!-- Heading -->
-            <!-- *********************************************************************** -->
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Participantes/index.html">
+                <a class="nav-link" href="#" onclick="Participante()">
                     <i class="fa-solid fa-users-between-lines"></i>
                     <span>Participantes</span></a>
             </li>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Cursos/index.html">
+                <a class="nav-link" href="#" onclick="Cursos()">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Cursos</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Cursos/index.html">
+                <a class="nav-link" href="#" onclick="Expositor()">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     <span>Expositores</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Cursos/index.html">
+                <a class="nav-link" href="#" onclick="Cordinador()">
                     <i class="fa-solid fa-users-rays"></i>
-                    <span>Cordinadores y Becarios</span></a>
+                    <span>Coordinadores Becarios</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="Laboratorio()">
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>Laboratorios</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Cursos/index.html">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <span>Reportes</span></a>
+                <a class="nav-link" href="#" onclick="Certificado()">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span> Generar Certificados</span></a>
             </li>
+
+            <!-- fin de panel  -->
             <!-- ************************************************** -->
 
 
@@ -269,7 +278,8 @@
                     <button class="btn btn-primary mb-4" type="button" onclick="frmUsuario();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
 
-
+                    <button class="btn btn-warning mb-4" type="button" onclick="">Inactivos <i
+                            class="fa-solid fa-user-slash"></i></button>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
 
@@ -302,10 +312,14 @@
                                             <td>Elmer</td>
                                             <td>User </td>
                                             <td><span class="badge badge-success">Activo</span></td>
-                                            <td><button class="btn btn-primary" type="button" onclick="frmUsuario()"><i
-                                                        class="fa-solid fa-pen-to-square"></i></button> <button
-                                                    class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i
-                                                        class="fa-solid fa-trash"></i></button></td>
+                                            <td><button class="btn btn-info" type="button" onclick="btnRolesUser('1')">
+                                                    <i class="fa-solid fa-key"></i></button>
+                                                <button class="btn btn-primary" type="button" onclick="frmUsuario()">
+                                                    <i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button class="btn btn-danger" type="button"
+                                                    onclick="btnEliminarPart()">
+                                                    <i class="fa-solid fa-trash"></i></button>
+                                            </td>
 
 
                                         </tr>
@@ -314,10 +328,13 @@
                                             <td>Sonia</td>
                                             <td>User</td>
                                             <td><span class="badge badge-danger">Inactivo</span></td>
-                                            <td><button class="btn btn-primary" type="button" onclick="frmUsuario()"><i
+                                            <td> <button class="btn btn-info" type="button" onclick="btnRolesUser('1')">
+                                                    <i class="fa-solid fa-key"></i></button>
+                                                <button class="btn btn-primary" type="button" onclick="frmUsuario()"><i
                                                         class="fa-solid fa-pen-to-square"></i></button> <button
                                                     class="btn btn-danger" type="button" onclick="btnEliminarPart()"><i
-                                                        class="fa-solid fa-trash"></i></button></td>
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
 
 
                                         </tr>
@@ -383,7 +400,106 @@
                     </div>
                     <!-- Fin del modal -->
                     <!-- ******************************************************* -->
+                    <!-- roles -->
+                    <div id="permisos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h5 class="modal-title text-white">Asignar Permisos</h5>
+                                    <button class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
 
+                                    </button>
+                                </div>
+                                <div  class="modal-body">
+                                    <form id="frmPermisos">
+                                        <div class=" ">
+                                            <div class="d-inline mx-3 ">
+                                                <div class="">
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Participante</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Usuarios</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Cursos</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Expositor</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                    <br>
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9  ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Participante</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Coodinador</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Laboratorio</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-control col-md-9 ">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label"
+                                                                        for="exampleCheck1">Certificados</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary mt-3 btn-block" type="button"
+                                                onclick="registrarPermisos(event);">Actualizar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin de rol -->
 
 
 
@@ -461,11 +577,12 @@
         <!-- Page level pdf -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-       <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-       <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-       <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
-       <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+        <script src="/Assets/js/direccion.js"></script>
 </body>
 
 </html>

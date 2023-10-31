@@ -54,7 +54,10 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-    <!-- *********************************************************************************** -->
+    
+<!-- *********************************************************************** -->
+            <!-- inicio de panel -->
+            <!-- *********************************************************************************** -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -65,37 +68,48 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="/Views/Carrera/index.html">Ing. Informática</a>
-                        <a class="collapse-item" href="/Views/Usuario/index.html">Usuarios</a>
+                        <a class="collapse-item" onclick="Carrera()" href="#">Ing. Informática</a>
+                        <a class="collapse-item"onclick="Usuario()"  href="#">Usuarios</a>
                     </div>
 
                 </div>
 
             </li>
-            <!-- Heading -->
-<!-- *********************************************************************** -->
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Participantes/index.html">
-        <i class="fa-solid fa-users-between-lines"></i>
-        <span>Participantes</span></a>
-</li>
-<!-- Nav Item - Tables -->
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Cursos</span></a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-chalkboard-user"></i>
-        <span>Expositores</span></a>
-</li>
+            <li class="nav-item">
+                <a class="nav-link"href="#"  onclick="Participante()">
+                    <i class="fa-solid fa-users-between-lines"></i>
+                    <span>Participantes</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link"href="#" onclick="Cursos()">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Cursos</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"href="#" onclick="Expositor()">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Expositores</span></a>
+            </li>
 
-<li class="nav-item">
-    <a class="nav-link" href="/Views/Cursos/index.html">
-        <i class="fa-solid fa-users-rays"></i>
-        <span>Cordinadores y Becarios</span></a>
-</li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"onclick="Cordinador()">
+                    <i class="fa-solid fa-users-rays"></i>
+                    <span>Coordinadores Becarios</span></a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="Laboratorio()">
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>Laboratorios</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="Certificado()">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span> Generar Certificados</span></a>
+            </li>
+       
+<!-- fin de panel  -->
 
             <!-- ************************************************** -->
 
@@ -264,6 +278,8 @@
 
                     <button class="btn btn-primary mb-4" type="button" onclick="frmPart();">Nuevo <i
                             class="fa-solid fa-user-plus"></i></button>
+                            <button class="btn btn-warning mb-4" type="button" onclick="">Inactivos <i
+                                class="fa-solid fa-user-slash"></i></button>
                   
                    <!-- DataTales Example -->
                    <div class="card shadow mb-4">
@@ -486,7 +502,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
-
+   <script src="/Assets/js/direccion.js"></script>
 </body>
 
 </html>

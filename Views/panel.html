@@ -37,9 +37,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Views/panel.html">
                 <div class="sidebar-brand-icon ">
-                    <i class="fa-solid fa-house"></i>
+                    <i class="fa-solid fa-house fa-2x"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">PANEL <sup></sup></div>
+                <div class="sidebar-brand-text mx-2 ">PANEL <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -50,7 +50,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
+            <!-- inicio de panel -->
             <!-- *********************************************************************************** -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -62,48 +62,49 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="/Views/Carrera/index.html">Ing. Informática</a>
-                        <a class="collapse-item" href="/Views/Usuario/index.html">Usuarios</a>
+                        <a class="collapse-item" href="#"onclick="Carrera()">Ing. Informática</a>
+                        <a class="collapse-item" href="#"onclick="Usuario()">Usuarios</a>
                     </div>
 
                 </div>
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Participantes/index.html">
+                <a class="nav-link"href="#"  onclick="Participante()">
                     <i class="fa-solid fa-users-between-lines"></i>
                     <span>Participantes</span></a>
             </li>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Cursos/index.html">
+                <a class="nav-link"href="#" onclick="Cursos()">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Cursos</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Expositor/index.html">
+                <a class="nav-link"href="#" onclick="Expositor()">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     <span>Expositores</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Coodinadores/index.html">
+                <a class="nav-link" href="#"onclick="Cordinador()">
                     <i class="fa-solid fa-users-rays"></i>
                     <span>Coordinadores Becarios</span></a>
             </li>
            
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Laboratorio/index.html">
+                <a class="nav-link" href="#" onclick="Laboratorio()">
                     <i class="fa-solid fa-desktop"></i>
                     <span>Laboratorios</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Views/Certificados/index.html">
+                <a class="nav-link" href="#" onclick="Certificado()">
                     <i class="fa-solid fa-certificate"></i>
                     <span> Generar Certificados</span></a>
             </li>
+          
        
-
+<!-- fin de panel  -->
 
 
             <!-- ******************************************************************************************************* -->
@@ -307,6 +308,7 @@
                                         </div>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
                         <!-- Earnings (Monthly) Card Example -->
@@ -316,7 +318,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2 ">
                                             <div class="  font-weight-bold text-warning text-uppercase mb-1  ">
-                                                coordinadores</div>
+                                                coordinadores y Becarios</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
                                         </div>
                                         <div class="col-auto">
@@ -349,28 +351,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div
-                                                class="text font-weight-bold font-weight-bold text-danger text-uppercase mb-1">
-
-                                                Becarios
-
-                                            </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7</div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                            <i class="fa-solid fa-user-tie fa-3x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                 
 
                     </div>
                 </div>
@@ -463,7 +444,7 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
+<script src="/Assets/js/direccion.js"></script>
 
 </body>
 

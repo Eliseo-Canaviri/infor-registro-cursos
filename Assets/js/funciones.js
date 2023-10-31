@@ -313,7 +313,18 @@ function registrarLabo(e) {
 
   }
 }
-
+function registrarPermisos(e) {
+  e.preventDefault();
+ 
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Permisos Asignado ☺",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+  $("#permisos").modal("hide"); //para que no se oculte el modal
+}
 function frmCambiarPass(e) {
   e.preventDefault();
   const actual= document.getElementById("clave_actual").value;
@@ -324,4 +335,9 @@ function frmCambiarPass(e) {
  }else{
     
  }
+}
+
+function btnRolesUser(id) {
+  $("#permisos").modal("show");
+
 }
