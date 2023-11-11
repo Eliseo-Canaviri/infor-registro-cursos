@@ -232,10 +232,6 @@ function registrarUser(e) {
 
   const nombre = document.getElementById("nombre");
   const usuario = document.getElementById("usuario");
- 
- 
- 
-
   if (usuario.value == "" || nombre.value == "") {
     Swal.fire({
       position: "top-end",
@@ -256,33 +252,33 @@ function registrarUser(e) {
   }
 }
 
-function btnEliminarPart(id) {
-  Swal.fire({
-    title: "Estas Seguro de Eliminar?",
-    text: "Se eliminara de forma permanente!!!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Si!",
-    cancelButtonText: "No",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      const url = base_url + "Cursos/eliminar/" + id; //estamos enviando ala controlador
-      const http = new XMLHttpRequest();
-      http.open("GET", url, true);
-      http.send();
-      http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          //console.log(this.responseText);
-          const res = JSON.parse(this.responseText);
-          tblcursos.ajax.reload(); //recargar tabla
-          alertas(res.msg, res.icono);
-        }
-      };
-    }
-  });
-}
+  function btnEliminarPart(id) {
+    Swal.fire({
+      title: "Estas Seguro de Eliminar?",
+      text: "Se eliminara de forma permanente!!!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si!",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const url = base_url + "Cursos/eliminar/" + id; //estamos enviando ala controlador
+        const http = new XMLHttpRequest();
+        http.open("GET", url, true);
+        http.send();
+        http.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            //console.log(this.responseText);
+            const res = JSON.parse(this.responseText);
+            tblcursos.ajax.reload(); //recargar tabla
+            alertas(res.msg, res.icono);
+          }
+        };
+      }
+    });
+  }
 
 function registrarPart(e) {
   e.preventDefault();
